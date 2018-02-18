@@ -1,0 +1,20 @@
+@import '~sass/variables';
+
+.deleted-button {
+    padding: .4rem 0rem;
+}
+.btn-main-color {
+    color: white;
+    background-color: $main-color;
+    border-color: $main-color;
+    &:hover {
+        background-color: $main-dark-color;
+        border-color: $main-dark-color;
+    }
+}
+
+.table-wrapper {
+    max-height: 400px;
+    overflow: auto;
+}
+

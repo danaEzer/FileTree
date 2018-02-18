@@ -1,0 +1,14 @@
+@import '~sass/variables';
+.navbar {
+    padding: .5rem 1rem 0rem 0rem;
+}
+.navbar-brand {
+    padding-left: .5rem;
+}
+.navbar-nav {
+    width: 100vw;
+    background-color: $main-color;
+}
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: $white-color;
+}

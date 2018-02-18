@@ -1,0 +1,27 @@
+<div class="btn-group btn-group-toggle deleted-button">
+  <!-- ngbButton checkbox -->
+  <label class="btn-main-color" ngbButtonLabel>
+    <input type="checkbox" ngbButton [(ngModel)]="showDeletedFiles"> Show Deleted Files Mode is {{showDeletedFiles ? 'ON' : 'OFF'}}
+  </label>
+</div>
+<div class="table-wrapper">
+  <table class="table">
+    <!-- Header - columns names -->  
+    <thead>
+      <tr>
+        <th *ngFor="let columnName of columnsNames">{{columnName}}</th>
+      </tr>
+    </thead>
+    <!-- Table's rows -->
+    <tbody>
+      <tr *ngFor="let obj of data">
+        <ng-container *ngIf="showDeletedFiles ? true : !(obj.isDeleted)">
+          <td>{{obj.name}}</td>
+          <td>{{obj.type}}</td>
+          <td>{{obj.size}}</td>
+          <td>{{obj.isDeleted}}</td>
+        </ng-container >
+      </tr>
+    </tbody>
+  </table>
+</div>
